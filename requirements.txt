@@ -1,0 +1,18 @@
+# LangChain core
+langchain
+langchain-community
+langchain-core
+langchain-openai
+
+# Modelos y embeddings
+openai
+weaviate-client
+
+# Lectura de documentos PDF
+pypdf
+
+# Vector store
+faiss-cpu
+
+# Manejo de variables de entorno
+python-dotenv

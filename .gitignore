@@ -1,0 +1,46 @@
+# Entornos virtuales
+venv/
+.env
+.env.*
+
+# Archivos de configuración local
+*.env
+*.local
+
+# Archivos de Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyc
+
+# Archivos de logs
+*.log
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de salida
+*.sqlite3
+*.db
+*.csv
+*.tsv
+*.json
+*.pdf
+*.pkl
+
+# Archivos generados por FAISS u otros modelos
+*.index
+*.faiss
+*.bin
+*.npy
+
+# Configuración VS Code
+.vscode/
+
+# Carpeta de datos
+data/
