@@ -1,3 +1,5 @@
+import tempfile
+import os
 import requests
 import io
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -28,6 +30,7 @@ def cargar_pdfs_desde_github(files, usuario, repositorio, carpeta, text_splitter
     Descarga, carga y divide PDFs desde un repositorio GitHub.
     """
     text = []
+    tmp_dir = tempfile.gettempdir()  
     for file in files:
         print(f"Procesando: {file}")
         carpeta_path = f"{carpeta}/" if carpeta else ""
@@ -37,7 +40,7 @@ def cargar_pdfs_desde_github(files, usuario, repositorio, carpeta, text_splitter
             response = requests.get(raw_url)
             response.raise_for_status()
 
-            tmp_path = f"/tmp/{file}"
+            tmp_path = os.path.join(tmp_dir, file)
             with open(tmp_path, "wb") as f:
                 f.write(response.content)
 
