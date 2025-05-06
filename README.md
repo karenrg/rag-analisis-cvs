@@ -12,30 +12,46 @@ Este proyecto implementa un sistema de análisis inteligente de currículums vit
 
 ---
 
-## Objetivo del proyecto
-
-Reducir el tiempo y esfuerzo en la selección de talento en TI mediante un prototipo funcional que:
-- Indexa CVs de profesionales del área.
-- Permite recuperar candidatos relevantes usando FAISS y LangChain.
-- Genera recomendaciones basadas en un prompt con requisitos del puesto.
-
----
-
 ## Tecnologías utilizadas
 
 - Python 3.10+
-- [LangChain](https://www.langchain.com/)
+- LangChain
 - OpenAI (vía `langchain-openai`)
 - FAISS (para recuperación semántica)
 - PyPDF (extracción de texto)
 - dotenv (gestión de variables de entorno)
-
 ---
 
-## Instalación
+## Implementación
 
 1. Cloná el repositorio:
 
 ```bash
 git clone https://github.com/tu-usuario/rag-analisis-cvs.git
 cd rag-talent-selection
+```
+
+2. Crear y configurar el archivo .env
+Debés crear un archivo .env con base en el archivo de ejemplo incluido:
+```bash
+cp .env.example .env
+```
+
+Las variables GITHUB_USER, GITHUB_REPO y GITHUB_FOLDER ya apuntan a una base de datos funcional para pruebas. Podés reemplazarlas si querés analizar otro repositorio.
+
+3. Instalar dependencias
+```bash
+pip install -r requirements.txt
+```
+4. Para probar las consultas, en el archivo rag_notebook.ipynb agregar celdas como:
+```python
+response = retrieval_chain.invoke(
+{"input": "Lístame el nombre de personas con formación académica de maestría en ciencia de datos"})
+print(response["answer"])
+```    
+en donde en el campo **input** se escribe la consulta acerca del corpus en cuestión. Al ejecutar la celda, se imprime la respuesta.
+
+## Informe y resultados
+El informe técnico y los resultados de prueba se encuentran en:
+- [documents/Articulo_AnalisisPerfilesTI.pdf](documents/Articulo_AnalisisPerfilesTI.pdf): Informe detallado del proyecto.
+- [documents/NotebookResultados.pdf](documents/NotebookResultados.pdf): Documentación de resultados generados por el sistema.
