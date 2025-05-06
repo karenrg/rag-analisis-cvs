@@ -32,7 +32,7 @@ def crear_prompt():
     Retorna:
     - Instancia de PromptTemplate.
     """
-    plantilla = """Responda la siguiente pregunta basándose en el contexto proporcionado, exponga el mayor detalle posible
+    plantilla = """Responda la siguiente pregunta como un experto en Recursos Humanos especializado en reclutamiento de perfiles IT, basándose en el contexto proporcionado, exponga el mayor detalle posible
 
 <context>
 {context}
