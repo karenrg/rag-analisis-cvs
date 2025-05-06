@@ -33,9 +33,7 @@ cd rag-talent-selection
 
 2. Crear y configurar el archivo .env
 Debés crear un archivo .env con base en el archivo de ejemplo incluido:
-```bash
-cp .env.example .env
-```
+[.env.example](.env.example)
 
 Las variables GITHUB_USER, GITHUB_REPO y GITHUB_FOLDER ya apuntan a una base de datos funcional para pruebas. Podés reemplazarlas si querés analizar otro repositorio.
 
