@@ -1,5 +1,3 @@
-from app.config import GITHUB_USER, GITHUB_REPO, GITHUB_FOLDER
-from app.github_utils import obtener_archivos_github
 from langchain_community.vectorstores import FAISS
 from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain

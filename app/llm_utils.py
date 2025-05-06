@@ -1,7 +1,6 @@
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain.prompts import PromptTemplate
 from langchain_community.vectorstores import FAISS
-from langchain.chains import create_retrieval_chain
 
 # Función que crea la instacia del modelo llm
 def crear_chat(modelo="gpt-4o-mini", temperatura=0.3):
