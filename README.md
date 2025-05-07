@@ -41,7 +41,7 @@ Las variables GITHUB_USER, GITHUB_REPO y GITHUB_FOLDER ya apuntan a una base de 
 ```bash
 pip install -r requirements.txt
 ```
-4. Para probar las consultas, en el archivo rag_notebook.ipynb agregar celdas como:
+4. Para probar las consultas, en el archivo [rag_notebook.ipynb](rag_notebook.ipynb) agregar celdas como:
 ```python
 response = retrieval_chain.invoke(
 {"input": "Lístame el nombre de personas con formación académica de maestría en ciencia de datos"})
